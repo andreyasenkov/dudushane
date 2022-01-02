@@ -21,7 +21,7 @@ const swiperSponsors = new Swiper('.sponsors-swiper', {
         delay: 3000
     },
     loop: true,
-    speed: 800,
+    speed: 1800,
     slidesPerView: "auto",
     a11y: {
         prevSlideMessage: 'Previous slide',
@@ -30,14 +30,22 @@ const swiperSponsors = new Swiper('.sponsors-swiper', {
 });
 
 // peopel-swiper
+const peopleSwiperButtonNext = document.querySelector('.people-swiper-button-next');
+const peopleSwiperButtonPrev = document.querySelector('.people-swiper-button-prev');
 const swiperPeople = new Swiper('.people-swiper', {
     speed: 1800,
     navigation: {
-        nextEl: '.people-swiper__button-next',
-        prevEl: '.people-swiper__button-prev',
+        nextEl: peopleSwiperButtonNext,
+        prevEl: peopleSwiperButtonPrev,
     },
-    hashNavigation: {
-        watchState: true,
+    breakpoints: {
+        576: {
+            slidesPerView: 2,
+            spaceBetween: 20
+        },
+        992: {
+            slidesPerView: 1,
+        },
     },
     a11y: {
         prevSlideMessage: 'Previous human',
