@@ -34,6 +34,7 @@ const peopleSwiperButtonNext = document.querySelector('.people-swiper-button-nex
 const peopleSwiperButtonPrev = document.querySelector('.people-swiper-button-prev');
 const swiperPeople = new Swiper('.people-swiper', {
     speed: 1800,
+    spaceBetween: 1,
     navigation: {
         nextEl: peopleSwiperButtonNext,
         prevEl: peopleSwiperButtonPrev,
