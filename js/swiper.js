@@ -23,10 +23,6 @@ const swiperSponsors = new Swiper('.sponsors-swiper', {
     loop: true,
     speed: 1800,
     slidesPerView: "auto",
-    a11y: {
-        prevSlideMessage: 'Previous slide',
-        nextSlideMessage: 'Next slide',
-    },
 });
 
 // peopel-swiper

@@ -339,11 +339,9 @@ body {
 .control-icon {
     fill: var(--background-color-section-total);
     stroke: var(--color-body-bright);
-    transition: stroke 0.2s ease-in, fill 0.2s ease-in;
     -webkit-transition: stroke 0.2s ease-in, fill 0.2s ease-in;
-    -moz-transition: stroke 0.2s ease-in, fill 0.2s ease-in;
-    -ms-transition: stroke 0.2s ease-in, fill 0.2s ease-in;
     -o-transition: stroke 0.2s ease-in, fill 0.2s ease-in;
+    transition: stroke 0.2s ease-in, fill 0.2s ease-in;
 }
 
 .header-control__icon:hover .control-icon {
@@ -480,19 +478,14 @@ body {
     height: 21px;
     stroke: var(--color-white);
     fill: var(--color-button-add-cart);
+    -webkit-transform: translateY(2px);
+    -ms-transform: translateY(2px);
     transform: translateY(2px);
     -webkit-transition: stroke 0.2s ease-in, fill 0.2s ease-in, -webkit-transform 0.2s ease-in;
     transition: stroke 0.2s ease-in, fill 0.2s ease-in, -webkit-transform 0.2s ease-in;
+    -o-transition: stroke 0.2s ease-in, fill 0.2s ease-in, transform 0.2s ease-in;
     transition: stroke 0.2s ease-in, fill 0.2s ease-in, transform 0.2s ease-in;
     transition: stroke 0.2s ease-in, fill 0.2s ease-in, transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
-    -webkit-transition: stroke 0.2s ease-in, fill 0.2s ease-in, transform 0.2s ease-in;
-    -moz-transition: stroke 0.2s ease-in, fill 0.2s ease-in, transform 0.2s ease-in;
-    -ms-transition: stroke 0.2s ease-in, fill 0.2s ease-in, transform 0.2s ease-in;
-    -o-transition: stroke 0.2s ease-in, fill 0.2s ease-in, transform 0.2s ease-in;
-    -webkit-transform: translateY(2px);
-    -moz-transform: translateY(2px);
-    -ms-transform: translateY(2px);
-    -o-transform: translateY(2px);
 }
 
 .best-left-content-search__button:hover {
@@ -740,11 +733,9 @@ body {
     width: 16px;
     height: 16px;
     fill: var(--color-body-bright);
-    transition: fill 0.2s ease-in;
     -webkit-transition: fill 0.2s ease-in;
-    -moz-transition: fill 0.2s ease-in;
-    -ms-transition: fill 0.2s ease-in;
     -o-transition: fill 0.2s ease-in;
+    transition: fill 0.2s ease-in;
 }
 
 .product-button:hover .product-button-icon {
@@ -859,6 +850,16 @@ body {
     line-height: 32px;
 }
 
+.product-cards-visible-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+}
+
 .product-cards-visible {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -867,9 +868,10 @@ body {
     -ms-flex-pack: center;
     justify-content: center;
     margin: 0 0 40px 0;
-    width: 100%;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
     height: 10px;
-    border-radius: 50%;
 }
 
 .product-cards__hide {
@@ -924,7 +926,6 @@ body {
 }
 
 .product-cards-visible__span {
-    margin: 0 10px 0 0;
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -935,15 +936,19 @@ body {
     transition: background-color 0.2s ease-in;
 }
 
-.product-cards-visible__span:hover {
+.product-cards-visible__span:not(:last-child) {
+    margin: 0 10px 0 0;
+}
+
+.product-cards-visible:hover span {
     background-color: var(--color-body-bright);
 }
 
-.product-cards-visible__span:focus {
-    background-color: var(--background-button);
+.product-cards-visible:focus span {
+    background-color: var(--color-green);
 }
 
-.product-cards-visible__span:active {
+.product-cards-visible:active span {
     background-color: var(--background-color-section-total);
 }
 
@@ -1130,7 +1135,7 @@ body {
 }
 
 .people-swiper-right {
-    -ms-flex-preferred-size: 625px;
+    -ms-flex-preferred-size: 32.55vw;
     flex-basis: 32.55vw;
     padding: 30px 0 0 0;
 }
@@ -1501,11 +1506,9 @@ body {
 }
 
 .footer-contact-us-item__href {
-    transition: color 0.2s ease-in;
     -webkit-transition: color 0.2s ease-in;
-    -moz-transition: color 0.2s ease-in;
-    -ms-transition: color 0.2s ease-in;
     -o-transition: color 0.2s ease-in;
+    transition: color 0.2s ease-in;
 }
 
 .footer-contact-us-item__href:hover {
@@ -1554,11 +1557,9 @@ body {
     width: 100%;
     height: 100%;
     fill: var(--background-button);
-    transition: fill 0.2s ease-in;
     -webkit-transition: fill 0.2s ease-in;
-    -moz-transition: fill 0.2s ease-in;
-    -ms-transition: fill 0.2s ease-in;
     -o-transition: fill 0.2s ease-in;
+    transition: fill 0.2s ease-in;
 }
 
 .footer-icons:hover,
@@ -1766,8 +1767,8 @@ body {
     }
 
     .perfect-row {
-        -webkit-box-align: flex-start;
-        -ms-flex-align: flex-start;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
         align-items: flex-start;
     }
 
@@ -1921,12 +1922,10 @@ body {
         visibility: hidden;
         opacity: 0;
         background-color: var(--background-color-section);
+        -webkit-transition: right 0.4s ease-in, visibility 0.2s ease-in, opasity 0.2s ease-in;
+        -o-transition: right 0.4s ease-in, visibility 0.2s ease-in, opasity 0.2s ease-in;
         transition: right 0.4s ease-in, visibility 0.2s ease-in, opasity 0.2s ease-in;
         z-index: 20;
-        -webkit-transition: right 0.4s ease-in, visibility 0.2s ease-in, opasity 0.2s ease-in;
-        -moz-transition: right 0.4s ease-in, visibility 0.2s ease-in, opasity 0.2s ease-in;
-        -ms-transition: right 0.4s ease-in, visibility 0.2s ease-in, opasity 0.2s ease-in;
-        -o-transition: right 0.4s ease-in, visibility 0.2s ease-in, opasity 0.2s ease-in;
     }
 
     .header-nav.is-active {
